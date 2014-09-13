@@ -1,0 +1,12 @@
+prompt_colorful_color_setup () {
+	COLOR1=${1:-blue}
+	COLOR2=${2:-yellow}
+	COLOR3=${3:-green}
+	COLOR4=${4:-red}
+	PS1="%F{$COLOR1}>>> %B%!%f%b %F{$COLOR2}%n%f%B@%b%F{$COLOR2}%m%f %F{$COLOR3}%~%f
+    %B%F{$COLOR4}%#%f%b "
+	PS2="    %B%F{$COLOR4}%_>%f%b "
+}
+
+prompt_colorful_color_setup "%@"
+

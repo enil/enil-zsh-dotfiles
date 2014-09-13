@@ -1,0 +1,7 @@
+prompt_colorful_ssh_setup () {
+	PS1=$'%(1j.%F{red}.%F{blue})>>> %B%!%f%b %K{white}%F{black}%n@%m%f%k %F{green}%~%f\n    %B%F{red}%#%f%b '
+	PS2=$'    %B%F{red}%_>%f%b '
+}
+
+prompt_colorful_ssh_setup "%@"
+

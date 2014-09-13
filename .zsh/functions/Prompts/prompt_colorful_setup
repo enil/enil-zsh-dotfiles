@@ -1,0 +1,7 @@
+prompt_colorful_setup () {
+	PS1=$'%(1j.%F{red}.%F{blue})>>> %B%!%f%b %F{yellow}%n%f%B@%b%F{yellow}%m%f %F{green}%~%f\n    %B%F{red}%#%f%b '
+	PS2=$'    %B%F{red}%_>%f%b '
+}
+
+prompt_colorful_setup "%@"
+

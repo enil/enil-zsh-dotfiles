@@ -1,0 +1,7 @@
+prompt_colorful_nocolor_ssh_setup () {
+	PS1=$'%(1j.%S>>>%s.>>>) %! %{\e[7m%}%n@%m%{\e[m%} %~\n    %# '
+	PS2=$'    %_> '
+}
+
+prompt_colorful_nocolor_ssh_setup "%@"
+

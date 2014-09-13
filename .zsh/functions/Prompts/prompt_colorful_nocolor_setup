@@ -1,0 +1,7 @@
+prompt_colorful_nocolor_setup () {
+	PS1=$'%(1j.%S>>>%s.>>>) %! %n@%m %~\n    %# '
+	PS2=$'    %_> '
+}
+
+prompt_colorful_nocolor_setup "%@"
+
