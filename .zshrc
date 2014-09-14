@@ -42,6 +42,7 @@ bindkey "^R" history-incremental-search-backward
 bindkey -M vicmd "^R" history-incremental-search-backward
 bindkey "^U" kill-whole-line
 bindkey -M vicmd "^U" kill-whole-line
+setopt extendedglob
 
 case $(uname -s) in
 	Linux)
