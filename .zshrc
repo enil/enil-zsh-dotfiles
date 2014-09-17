@@ -57,4 +57,12 @@ alias ll="ls -l"
 alias lsh='ls -da .*'
 # list all files with details
 alias llh='ls -da .*'
+# create a new tmux session
+alias tnews='tmux new-session -s'
+# attach tmux session
+alias tatts='tmux attach-session -t'
+# kill tmux session
+alias tkills='tmux kill-session -t'
+# list all tmux sessions
+alias tlists='tmux list-session'
 
