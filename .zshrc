@@ -67,4 +67,6 @@ alias tkills='tmux kill-session -t'
 alias tlists='tmux list-session'
 # attach remote tmux session
 tssh () { ssh -t $1 "tmux attach-session -t $2" }
+# make groovysh headless
+alias groovysh='groovysh -Djava.awt.headless=true'
 
