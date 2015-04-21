@@ -2,6 +2,8 @@ fpath=(~/.zsh/functions/{Prompts,Completion} $fpath)
 
 # local zsh configuraiton file
 local_config_file=$HOME/.zshrc.local
+# OS-specific zsh configuration file
+os_config_file=$HOME/.zshrc.$(uname -s | tr "[:upper:]" "[:lower:]")
 # prompt theme name
 prompt="colorful"
 
@@ -12,8 +14,9 @@ autoload -U promptinit && promptinit
 # color constants
 autoload -U colors && colors
 
-# load local zsh settings from .zshrc.local
+# load local and OS-specific zsh settings
 [[ -f $local_config_file ]] && source $local_config_file
+[[ -f $os_config_file ]] && source $os_config_file
 
 # select promt variant depending on remote login and color support.
 select_prompt() {
@@ -44,13 +47,6 @@ bindkey "^U" kill-whole-line
 bindkey -M vicmd "^U" kill-whole-line
 setopt extendedglob
 
-case $(uname -s) in
-	Linux)
-		alias ls="ls -F --color=auto" ;;
-	Darwin)
-		alias ls="ls -FG" ;;
-esac
-
 # list files with details
 alias ll="ls -l"
 # lists all files
@@ -67,6 +63,4 @@ alias tkills='tmux kill-session -t'
 alias tlists='tmux list-session'
 # attach remote tmux session
 tssh () { ssh -t $1 "tmux attach-session -t $2" }
-# make groovysh headless
-alias groovysh='groovysh -Djava.awt.headless=true'
 

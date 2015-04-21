@@ -1,0 +1,6 @@
+alias ls="ls -FG"
+# reverse cat
+alias tac="tail -r"
+# make groovysh headless
+alias groovysh='groovysh -Djava.awt.headless=true'
+
