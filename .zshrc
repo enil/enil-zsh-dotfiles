@@ -53,6 +53,8 @@ alias ll="ls -l"
 alias lsh='ls -da .*'
 # list all files with details
 alias llh='ll -da .*'
+# go to git project root
+alias git-root='cd $(git rev-parse --show-toplevel)'
 # create a new tmux session
 alias tnews='tmux new-session -s'
 # attach tmux session
