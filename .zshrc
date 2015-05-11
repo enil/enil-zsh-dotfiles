@@ -48,11 +48,15 @@ bindkey -M vicmd "^U" kill-whole-line
 setopt extendedglob
 
 # list files with details
-alias ll="ls -l"
+alias ll='ls -l'
 # lists all files
 alias lsh='ls -da .*'
 # list all files with details
 alias llh='ll -da .*'
+# allow color in less by default
+alias less='less -R'
+# color tree output
+alias tree='tree -CF'
 # go to git project root
 alias git-root='cd $(git rev-parse --show-toplevel)'
 # create a new tmux session
