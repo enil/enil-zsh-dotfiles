@@ -59,6 +59,8 @@ alias less='less -R'
 alias tree='tree -CF'
 # go to git project root
 alias git-root='cd $(git rev-parse --show-toplevel)'
+# print paths
+alias paths='echo $PATH | tr ":" "\n"'
 # create a new tmux session
 alias tnews='tmux new-session -s'
 # attach tmux session
