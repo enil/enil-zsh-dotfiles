@@ -47,6 +47,8 @@ bindkey "^U" kill-whole-line
 bindkey -M vicmd "^U" kill-whole-line
 setopt extendedglob
 
+# prevent extendedglob from being used with git
+alias git='noglob git'
 # list files with details
 alias ll='ls -l'
 # lists all files
