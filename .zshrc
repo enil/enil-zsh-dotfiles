@@ -1,9 +1,9 @@
 fpath=(~/.zsh/functions/{Prompts,Completion} $fpath)
 
-# local zsh configuraiton file
-local_config_file=$HOME/.zshrc.local
 # OS-specific zsh configuration file
 os_config_file=$HOME/.zshrc.$(uname -s | tr "[:upper:]" "[:lower:]")
+# local zsh configuraiton file
+local_config_file=$HOME/.zshrc.local
 # prompt theme name
 prompt="colorful"
 
@@ -15,8 +15,8 @@ autoload -U promptinit && promptinit
 autoload -U colors && colors
 
 # load local and OS-specific zsh settings
-[[ -f $local_config_file ]] && source $local_config_file
 [[ -f $os_config_file ]] && source $os_config_file
+[[ -f $local_config_file ]] && source $local_config_file
 
 # select promt variant depending on remote login and color support.
 select_prompt() {
