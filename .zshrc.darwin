@@ -1,3 +1,11 @@
+if [[ -x /usr/libexec/path_helper ]]; then
+	# reset the path to prevent it from getting set twice by tmux
+	# NOTE: this could be copied to /etc/zshenv instead
+	export PATH=
+	export MANPATH=
+	eval `/usr/libexec/path_helper -s`
+fi
+
 alias ls="ls -FG"
 # reverse cat
 alias tac="tail -r"
