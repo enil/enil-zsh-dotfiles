@@ -8,6 +8,14 @@ The configuration should work both on OS X and Linux.
 Just run the `install.sh` script and it will symlink everything to the home directory.
 I prefer to keep the git under `~/.dotfiles/zsh`.
 
+[docker-zsh-completion] is used to autocomplete `docker` commands.
+To enable this it must be added as a [submodule]:
+
+```sh
+git submodule init
+git submodule update
+```
+
 ## Features and notes
 
 * The optional configuration file `.zshrc.local` will be included if available and can be used for per-machine
@@ -19,4 +27,7 @@ distiguish SSH sessions.
 * The aliases `tnews`, `tatts`, `tkills` and `tlists` are handy shortcuts for working with tmux sessions.
 * The command `tssh` is a shortcut to attach to a tmux session over SSH.
 * The command `tmuxterm` creates a tmux session which will be automatically killed when the pseudoterminal closes.
+
+[docker-zsh-completion]: https://github.com/felixr/docker-zsh-completion
+[submodule]:             https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
