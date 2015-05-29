@@ -1,4 +1,4 @@
-fpath=(~/.zsh/functions/{Prompts,Completion} $fpath)
+fpath=(~/.zsh/{completion,functions/prompts} $fpath)
 
 # OS-specific zsh configuration file
 os_config_file=$HOME/.zshrc.$(uname -s | tr "[:upper:]" "[:lower:]")
