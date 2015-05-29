@@ -74,3 +74,17 @@ alias tlists='tmux list-session'
 # attach remote tmux session
 tssh () { ssh -t $1 "tmux attach-session -t $2" }
 
+# start tmux session which is killed when exited
+tmuxterm() {
+	local sessionid="term-$(uuidgen)"
+	trap "_tmuxterm_exit $sessionid 2> /dev/null" EXIT
+	tmux new-session -s "$sessionid" $*
+}
+
+_tmuxterm_exit() {
+	local sessionid=$1
+	if tmux has-session -t "$sessionid"; then
+		tmux kill-session -t "$sessionid"
+	fi
+}
+
