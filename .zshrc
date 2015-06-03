@@ -24,7 +24,7 @@ select_prompt() {
     # use nocolor theme if terminal is "dumb"
     [[ "$TERM" = "dumb" ]] && prompt_name+="_nocolor"
     # use ssh theme if connected by ssh
-    [ "$SSH_CONNECTION" ] && prompt_name+="_ssh"
+    [[ -n "$SSH_CONNECTION" ]] && prompt_name+="_ssh"
     # set zsh prompt
     prompt $prompt_name
 }
