@@ -6,6 +6,6 @@ OS_CONFIG_FILE=.zshrc.$(uname -s | tr "[:upper:]" "[:lower:]")
 [ -f $OS_CONFIG_FILE ] && FILES="$OS_CONFIG_FILE $FILES"
 
 for file in $FILES; do
-	 ln -siFh $DIR/$file $HOME/$file
+	 ln -siFn $DIR/$file $HOME/$file
 done
 
