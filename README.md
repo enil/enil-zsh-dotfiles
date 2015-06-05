@@ -10,12 +10,7 @@ I prefer to keep the git under `~/.dotfiles/zsh`.
 
 [docker-zsh-completion] is used to autocomplete `docker` commands, and [docker-compose-zsh-completion] for
 `docker-compose` commands.
-To enable these they must be added as [submodules]:
-
-```sh
-git submodule init
-git submodule update
-```
+The submodules are installed automatically if `git` exists.
 
 ## Features and notes
 

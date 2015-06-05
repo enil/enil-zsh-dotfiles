@@ -1,6 +1,6 @@
 [submodule ".zsh/completion/docker-zsh-completion"]
 	path = .zsh/completion/docker-zsh-completion
-	url = git@github.com:felixr/docker-zsh-completion.git
+	url = https://github.com/felixr/docker-zsh-completion.git
 [submodule ".zsh/completion/docker-compose-zsh-completion"]
 	path = .zsh/completion/docker-compose-zsh-completion
-	url = git@github.com:sdurrheimer/docker-compose-zsh-completion.git
+	url = https://github.com/sdurrheimer/docker-compose-zsh-completion.git
