@@ -32,7 +32,11 @@ select_prompt() {
 select_prompt $prompt
 
 # enable 256 colors
-export TERM=xterm-256color
+if [ -n "$TMUX" ]; then
+	export TERM=screen-256color
+else
+	export TERM=xterm-256color
+fi
 # default editor
 export EDITOR=vim
 export VISUAL=vim
