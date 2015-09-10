@@ -46,6 +46,11 @@ bindkey "^R" history-incremental-search-backward
 bindkey -M vicmd "^R" history-incremental-search-backward
 bindkey "^U" kill-whole-line
 bindkey -M vicmd "^U" kill-whole-line
+bindkey "^H" backward-delete-char
+bindkey -M vicmd "^H" backward-delete-char
+bindkey "^?" backward-delete-char
+bindkey -M vicmd "^?" backward-delete-char
+
 setopt extendedglob
 
 # prevent extendedglob from being used with git
@@ -73,7 +78,7 @@ alias tkills='tmux kill-session -t'
 # list all tmux sessions
 alias tlists='tmux list-session'
 # attach remote tmux session
-tssh () { ssh -t $1 "tmux attach-session -t $2" }
+tssh() { ssh -t $1 "tmux attach-session -t $2" }
 
 # start tmux session which is killed when exited
 tmuxterm() {
