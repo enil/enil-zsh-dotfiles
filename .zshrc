@@ -63,8 +63,8 @@ alias lsh='ls -da .*'
 alias llh='ll -da .*'
 # allow color in less by default
 alias less='less -R'
-# color tree output and ignore .git directory
-alias tree='tree -CF -I .git'
+# color tree output and ignore some directories
+alias tree='tree -CF -I .git -I node_modules'
 # go to git project root
 alias git-root='cd $(git rev-parse --show-toplevel)'
 # print paths
